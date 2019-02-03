@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/laugh_tracker'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://yltvamaeksflmr:107bfa9a1e5096f4fe0e9b77fc231ebbcdc238f33e85bcd8a36f2765b6a77fe8@ec2-23-21-244-254.compute-1.amazonaws.com:5432/dc344enjr2hp39'
 
 db = SQLAlchemy(app)
 
