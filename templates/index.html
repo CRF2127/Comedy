@@ -18,9 +18,9 @@
     </li>
   </ul>
     <div class="tab-content">
-      <div role="tabpanel" class="tab-pane active" id="comedian">
+      <div role="tabpanel" class="tab-pane fade in active" id="comedian">
         
-        <div class="row container-fluid">
+        <div class="row container-fluid active">
           <ul>
           {% for shows in shows %}
           <li> {{shows.comedian}}</li>
@@ -30,6 +30,8 @@
       
       </div>
       <div role="tabpanel" class="tab-pane fade" id="club">Club</div>
+
+         
 
       <div role="tabpanel" class="tab-pane fade" id="day">Day</div>
     </div>
