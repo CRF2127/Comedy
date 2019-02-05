@@ -7,29 +7,30 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod ac lorem cursus feugiat. In eros diam, malesuada vitae libero id, scelerisque euismod risus. Quisque dictum tellus lorem, at mattis ante laoreet sed. Aenean mollis arcu id feugiat pellentesque. Maecenas purus massa, mattis a gravida sit amet, ullamcorper nec risus. Donec faucibus nunc dictum lectus lacinia dictum. Nullam facilisis ultricies sem eget eleifend. Etiam iaculis dapibus felis quis mollis. Etiam in euismod tortor. In placerat hendrerit erat elementum commodo. Maecenas venenatis nunc ipsum, non pharetra magna ultrices id.</p>
   </section>
   <ul class="nav nav-pills nav-justified">
-    <li class="nav-item">
+    <li role="presentation" class="nav-item active">
       <a href="#comedian" class="nav-link active" role="tab" data-toggle="pill">Comedian</a>
     </li>
-    <li class="nav-item">
+    <li role="presentation" class="nav-item">
       <a href="#club" class="nav-link" role="tab" data-toggle="pill">Club</a>
     </li>
-    <li class="nav-item">
+    <li role="presentation" class="nav-item">
       <a href="#day" class="nav-link" role="tab" data-toggle="pill">Day</a>
     </li>
   </ul>
     <div class="tab-content">
-      <div role="tabpanel" class="tab-pane fade" id="comedian">
-        <ul>
-        {% for shows in shows %}
-        <li> {{shows.comedian}}</li>
-        {% endfor %}
-        </ul>
+      <div role="tabpanel" class="tab-pane active" id="comedian">
+        
+        <div class="row container-fluid">
+          <ul>
+          {% for shows in shows %}
+          <li> {{shows.comedian}}</li>
+          {% endfor %}
+          </ul>
+        </div>
+      
       </div>
       <div role="tabpanel" class="tab-pane fade" id="club">Club</div>
-        <ul>
-        {% for shows in shows %}
-        <li> {{shows.location}}</li>
-        {% endfor %}
+
       <div role="tabpanel" class="tab-pane fade" id="day">Day</div>
     </div>
   
