@@ -22,54 +22,83 @@
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane fade in active" id="comedian">
         
-        <div class="row container-fluid">
-          <div class="col-md-2">
-              <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a data-toggle="pill" href="#name1">Name 1</a></li>
-                <li><a data-toggle="pill" href="#name2">Name 2</a></li>
-                <li><a data-toggle="pill" href="#name3">Name 3</a></li>
-              </ul>
-          </div>
-          <div class="col-md-10 container-fluid">
-              <div class="tab-content">
-                <div id="name1" class="tab-pane fade in active">
-                  <p>Some content.</p>
-                </div>
-                <div id="name2" class="tab-pane fade">
-                  <p>Some content in name 2.</p>
-                </div>
-                <div id="name3" class="tab-pane fade">
-                  <p>Some content in name 3.</p>
-                </div>
-              </div>
-            </div>
-        </div>
+<section>
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-2">
+  <ul class="nav row nav-pills nav-stacked">
+  {% for shows in shows %}
+    {% if loop.index == 1 %}
+    <li role="presentation" class="nav-item active">
+      <a href="#{{shows.comedian}}" class="nav-link active" role="tab" data-toggle="pill">{{shows.comedian}}</a>
+    </li>
+    {% else %}
+    <li role="presentation" class="nav-item">
+      <a href="#{{shows.comedian}}" class="nav-link" role="tab" data-toggle="pill">{{shows.comedian}}</a>
+    </li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+  </div>
+  <div class="col-sm-10">
+    <div class="tab-content">
+    {% for shows in shows %}
+      {% if loop.index == 1 %}
+      <div role="tabpanel" class="tab-pane fade in active" id="{{shows.comedian}}">
+        <p>{{shows.description}}</p>
+      </div>
+      {% else %}
+      <div role="tabpanel" class="tab-pane fade" id="{{shows.comedian}}">
+         <p>{{shows.description}}</p>
+      </div>
+      {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+</div>
+</div>
+</section>
       
       </div>
       <div role="tabpanel" class="tab-pane fade" id="club">
 
-         <div class="row container-fluid">
-          <div class="col-sm-1">
-              <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a data-toggle="pill" href="#place1">place 1</a></li>
-                <li><a data-toggle="pill" href="#place2">place 2</a></li>
-                <li><a data-toggle="pill" href="#place3">place 3</a></li>
-              </ul>
-          </div>
-          <div class="col-sm-11 container-fluid">
-              <div class="tab-content">
-                <div id="place1" class="tab-pane fade in active">
-                  <p>Some PLACE content.</p>
-                </div>
-                <div id="place2" class="tab-pane fade">
-                  <p>Some PLACE content in name 2.</p>
-                </div>
-                <div id="place3" class="tab-pane fade">
-                  <p>Some PLACE content in name 3.</p>
-                </div>
-              </div>
-            </div>
-        </div>
+<section>
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-2">
+  <ul class="nav row nav-pills nav-stacked">
+  {% for shows in shows %}
+    {% if loop.index == 1 %}
+    <li role="presentation" class="nav-item active">
+      <a href="#{{shows.location}}" class="nav-link active" role="tab" data-toggle="pill">{{shows.location}}</a>
+    </li>
+    {% else %}
+    <li role="presentation" class="nav-item">
+      <a href="#{{shows.location}}" class="nav-link" role="tab" data-toggle="pill">{{shows.location}}</a>
+    </li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+  </div>
+  <div class="col-sm-10">
+    <div class="tab-content">
+    {% for shows in shows %}
+      {% if loop.index == 1 %}
+      <div role="tabpanel" class="tab-pane fade in active" id="{{shows.location}}">
+        <p>{{shows.comedian}}</p>
+      </div>
+      {% else %}
+      <div role="tabpanel" class="tab-pane fade" id="{{shows.location}}">
+         <p>{{shows.comedian}}</p>
+      </div>
+      {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
       </div>
       <div role="tabpanel" class="tab-pane fade" id="day">
 
@@ -126,6 +155,43 @@
         {% endfor %}
       <p>Test</p>
   </section>
+
+<section>
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-2">
+  <ul class="nav row nav-pills nav-stacked">
+  {% for shows in shows %}
+    {% if loop.index == 1 %}
+    <li role="presentation" class="nav-item active">
+      <a href="#{{shows.comedian}}" class="nav-link active" role="tab" data-toggle="pill">{{shows.comedian}}</a>
+    </li>
+    {% else %}
+    <li role="presentation" class="nav-item">
+      <a href="#{{shows.comedian}}" class="nav-link" role="tab" data-toggle="pill">{{shows.comedian}}</a>
+    </li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+  </div>
+  <div class="col-sm-10">
+    <div class="tab-content">
+    {% for shows in shows %}
+      {% if loop.index == 1 %}
+      <div role="tabpanel" class="tab-pane fade in active" id="{{shows.comedian}}">
+        <p>{{shows.description}}</p>
+      </div>
+      {% else %}
+      <div role="tabpanel" class="tab-pane fade" id="{{shows.comedian}}">
+         <p>{{shows.description}}</p>
+      </div>
+      {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+</div>
+</div>
+</section>
 -->
 </div>
 </main>
