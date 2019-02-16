@@ -1,24 +1,27 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<main id="main">
-<div class="container-fluid">
-  <section class="row container-fluid">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod ac lorem cursus feugiat. In eros diam, malesuada vitae libero id, scelerisque euismod risus. Quisque dictum tellus lorem, at mattis ante laoreet sed. </p>
-  </section>
-  <div class="container-fluid">
-  <ul class="nav row nav-pills nav-justified">
-    <li role="presentation" class="nav-item active">
-      <a href="#comedian" class="nav-link active" role="tab" data-toggle="pill">Comedian</a>
-    </li>
-    <li role="presentation" class="nav-item">
-      <a href="#club" class="nav-link" role="tab" data-toggle="pill">Club</a>
-    </li>
-    <li role="presentation" class="nav-item">
-      <a href="#day" class="nav-link" role="tab" data-toggle="pill">Subscribe!</a>
-    </li>
-  </ul>
-    
+<main class="container" id="main">
+<div class="col">
+  <div class="row">
+    <article id="about">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod ac lorem cursus feugiat. In eros diam, malesuada vitae libero id, scelerisque euismod risus. Quisque dictum tellus lorem, at mattis ante laoreet sed. </p>
+    </article>
+  </div>
+  <div class="col container-fluid" id="lineup">
+  <div class="row">
+    <ul class="nav nav-pills nav-justified">
+      <li role="presentation" class="nav-item active">
+        <a href="#comedian" class="nav-link active" role="tab" data-toggle="pill">Comedian</a>
+      </li>
+      <li role="presentation" class="nav-item">
+        <a href="#club" class="nav-link" role="tab" data-toggle="pill">Club</a>
+      </li>
+      <li role="presentation" class="nav-item">
+        <a href="#day" class="nav-link" role="tab" data-toggle="pill">Subscribe!</a>
+      </li>
+    </ul>
+  </div> 
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane fade in active" id="comedian">
         
