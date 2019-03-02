@@ -7,10 +7,7 @@ app = Flask(__name__)
 
 # CONFIG
 app.config.from_object(os.environ['APP_SETTINGS'])
-#app.config.from_object('config.ProductionConfig')
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/laugh_tracker'
-#'postgres://yltvamaeksflmr:107bfa9a1e5096f4fe0e9b77fc231ebbcdc238f33e85bcd8a36f2765b6a77fe8@ec2-23-21-244-254.compute-1.amazonaws.com:5432/dc344enjr2hp39'
-print(os.environ['APP_SETTINGS'])
+
 
 db = SQLAlchemy(app)
 
